@@ -1,50 +1,61 @@
 package domain.models;
 
 public class BankAccount {
+    private String id;
+    private String accNumber;
+    private Customer owner;
+    private Movement transaction;
+    private Product product;
+    private Integer balance;
 
-    private Integer NºCuenta;
-    private Customer customer;
-    private Movements movements;
-    private String ProductoContrtado;
-    private Integer saldo;
-
-    public Integer getNºCuenta() {
-        return NºCuenta;
+    public String getAccNumber() {
+        return accNumber;
     }
 
-    public void setNºCuenta(Integer nºCuenta) {
-        NºCuenta = nºCuenta;
+    public void setAccNumber(String accNumber) {
+        this.accNumber = accNumber;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public Customer getOwner() {
+        return owner;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setOwner(Customer owner) {
+        this.owner = owner;
     }
 
-    public Movements getMovements() {
-        return movements;
+    public Product getProduct() {
+        return product;
     }
 
-    public void setMovements(Movements movements) {
-        this.movements = movements;
+    public void setProduct(Product product) {
+        this.product = product;
     }
 
-    public String getProductoContrtado() {
-        return ProductoContrtado;
+    public Integer getBalance() {
+        return balance;
     }
 
-    public void setProductoContrtado(String productoContrtado) {
-        ProductoContrtado = productoContrtado;
+    public void setBalance(Integer balance) {
+        this.balance = balance;
     }
 
-    public Integer getSaldo() {
-        return saldo;
+    public void setTransaction(Movement transaction) {
+        this.transaction = transaction;
+    }
+    public Movement getTransaction(){
+        return transaction;
     }
 
-    public void setSaldo(Integer saldo) {
-        this.saldo = saldo;
+    public String getId() {
+        return id;
     }
-}
+
+    public void setId(String id) {
+        this.id = id;
+    }
+    @Override
+    public String toString() {
+        //TODO
+    }
+}}
