@@ -1,6 +1,9 @@
 package data.local;
 
 import domain.models.BankAccount;
+import domain.models.Product;
+import domain.models.Customer;
+import domain.models.Movement;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -37,7 +40,7 @@ public class BankAccountFileDataSource {
             for (BankAccount model : models) {
                 String line = model.getId() + "," + model.getAccNumber() + ","
                         + model.getOwner().getId() + "," + model.getTransaction().getId() + ","
-                        + model.getProduct().getId() + "," + model.getBalance() + "\n";
+                        + model.getProduct().getCode() + "," + model.getBalance() + "\n";
                 writer.write(line);
             }
             writer.close();
@@ -78,12 +81,15 @@ public class BankAccountFileDataSource {
                     String accNumber = data[1];
                     String ownerId = data[2];
                     String transactionId = data[3];
-                    String productId = data[4];
+                    String productCode = data[4];
                     Integer balance = Integer.parseInt(data[5]);
 
-                    Customer owner = new Customer(ownerId);
-                    Movement transaction = new Movement(transactionId);
-                    Product product = new Product(productId);
+                    Customer owner = new Customer();
+                    owner.setId(ownerId);
+                    Movement transaction = new Movement();
+                    transaction.setId(transactionId);
+                    Product product = new Product();
+                    product.setCode(productCode);
 
                     BankAccount model = new BankAccount();
                     model.setId(id);
