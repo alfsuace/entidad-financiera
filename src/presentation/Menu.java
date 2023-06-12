@@ -1,5 +1,9 @@
 package presentation;
 
+import domain.models.Customer;
+import domain.models.Movement;
+import domain.models.Product;
+
 public class Menu {
     public void init(){
         // createNewPayment();

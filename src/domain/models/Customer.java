@@ -40,7 +40,11 @@ public class Customer extends Person{
 
     @Override
     public String toString() {
-        //TODO
-        return null;
+        return
+                "id='" + id + '\'' +
+                ", address='" + address + '\'' +
+                ", town='" + town + '\'' +
+                ", addressCode='" + addressCode + '\'' +
+                '}';
     }
 }

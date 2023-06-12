@@ -31,7 +31,10 @@ public class Product {
     }
     @Override
     public String toString() {
-        //TODO
-        return null;
+        return
+                "code='" + code + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 }
