@@ -56,7 +56,7 @@ public class BankAccount {
     }
     @Override
     public String toString() {
-        return "MyClass{" +
+        return 
                 "id='" + id + '\'' +
                 ", accNumber='" + accNumber + '\'' +
                 ", owner=" + owner.toString() +
