@@ -8,9 +8,11 @@ import domain.models.Movement;
 import domain.models.Product;
 import domain.useCase.CreateBankAccountUseCase;
 
+import java.sql.SQLException;
+
 public class NewBankAccount {
 
-    public void createBankAccoutn(Customer customer, Movement movement, Movement movement2, Product product){
+    public void createBankAccount(Customer customer, Movement movement, Movement movement2, Product product) throws SQLException {
         BankAccount bankAccount= buildBankAccount(customer, movement, movement2, product);
         saveBankAccount(bankAccount);
     }
@@ -24,7 +26,7 @@ public class NewBankAccount {
         bankAccount.setProduct(product);
         return bankAccount;
     }
-    private void saveBankAccount(BankAccount bankAccount){
+    private void saveBankAccount(BankAccount bankAccount) throws SQLException {
         CreateBankAccountUseCase createBankAccountUseCase = new CreateBankAccountUseCase(
                 new BankAccountDataRepository(BankAccountFileDataSource.getInstance()));
         createBankAccountUseCase.execute(bankAccount);

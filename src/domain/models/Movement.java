@@ -31,7 +31,10 @@ public class Movement {
     }
     @Override
     public String toString() {
-        //TODO
-        return null;
+        return
+                "id='" + id + '\'' +
+                ", description='" + description + '\'' +
+                ", amount=" + amount +
+                '}';
     }
 }

@@ -56,7 +56,13 @@ public class BankAccount {
     }
     @Override
     public String toString() {
-        //TODO
-        return null;
+        return "MyClass{" +
+                "id='" + id + '\'' +
+                ", accNumber='" + accNumber + '\'' +
+                ", owner=" + owner.toString() +
+                ", transaction=" + transaction.toString() +
+                ", product=" + product.toString() +
+                ", balance=" + balance +
+                '}';
     }
 }

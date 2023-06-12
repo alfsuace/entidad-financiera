@@ -127,7 +127,6 @@ public class BankAccountFileDataSource {
     }
 
 
-
     public static BankAccountFileDataSource getInstance() {
         if (instance == null) {
             instance = new BankAccountFileDataSource();
