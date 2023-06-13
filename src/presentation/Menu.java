@@ -12,7 +12,7 @@ public class Menu {
         // createNewCharge();
         // createNewMortgage();
         // createNewClient();
-        // createNewBankAccount(customer, movement, movement2, product);
+        //createNewBankAccount(customer, movement, movement2, product);
         // listClient();
     }
 
@@ -20,7 +20,7 @@ public class Menu {
         NewPayment newPayment = new NewPayment();
         newPayment.createPayment();
     }
-    private void createNewCharge(){
+    private void createNewCharge() throws SQLException {
         NewCharge newCharge=new NewCharge();
         newCharge.createCharge();
     }
