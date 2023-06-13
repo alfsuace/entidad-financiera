@@ -4,6 +4,8 @@ import domain.models.Customer;
 import domain.models.Movement;
 import domain.models.Product;
 
+import java.sql.SQLException;
+
 public class Menu {
     public void init(){
         // createNewPayment();
@@ -14,7 +16,7 @@ public class Menu {
         // listClient();
     }
 
-    private void createNewPayment(){
+    private void createNewPayment() throws SQLException {
         NewPayment newPayment = new NewPayment();
         newPayment.createPayment();
     }
@@ -30,9 +32,9 @@ public class Menu {
         NewClient newClient = new NewClient();
         newClient.createClient();
     }
-    private void createNewBankAccount(Customer customer, Movement movement, Movement movement2, Product product){
+    private void createNewBankAccount(Customer customer, Movement movement, Movement movement2, Product product) throws SQLException {
         NewBankAccount newBankAccount = new NewBankAccount();
-        newBankAccount.createBankAccoutn(customer, movement, movement2, product);
+        newBankAccount.createBankAccount(customer, movement, movement2, product);
     }
 
     private void listClient(){
