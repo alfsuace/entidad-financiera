@@ -6,8 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class DeleteBankAccountUseCase {
-    public void borrarCuentaBancaria(String id) throws SQLException {
-        String consulta = "DELETE FROM cuentaBancaria WHERE id=?";
+    public void borrarCliente(String id) throws SQLException {
+        String consulta = "DELETE FROM customer WHERE id=?";
         Conexion conexion = new Conexion();
         PreparedStatement statement = conexion.prepareStatementFunction(consulta);
         statement.setString(1, id);
@@ -15,5 +15,6 @@ public class DeleteBankAccountUseCase {
         statement.close();
         conexion.cerrarConexion();
     }
+
 
 }
