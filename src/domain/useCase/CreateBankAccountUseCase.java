@@ -13,7 +13,6 @@ public class CreateBankAccountUseCase {
 
     public void execute(BankAccount bankAccount) throws SQLException {
         bankAccountRepository.save(bankAccount);
-        //primero que mire local y luego bbdd?? o al reves, pero que mire ambas y use una
     }
 }
 
